@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<style type="text/css">
+/*=============Slick Slider============*/
+*, *:before, *:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+<style type="text/css">
+/*=============Slick Slider============*/
+
+.slick-slider
+{
+    position: relative;
+
+    display: block;
+    box-sizing: border-box;
+
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+        touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list
+{
+    position: relative;
+
+    display: block;
+    overflow: hidden;
+
+    margin: 0;
+    padding: 0;
+}
+.slick-list:focus
+{
+    outline: none;
+}
+.slick-list.dragging
+{
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list
+{
+    -webkit-transform: translate3d(0, 0, 0);
+       -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+         -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+
+.slick-track
+{
+    position: relative;
+    top: 0;
+    left: 0;
+
+    display: block;
+}
+.slick-track:before,
+.slick-track:after
+{
+    display: table;
+
+    content: '';
+}
+.slick-track:after
+{
+    clear: both;
+}
+.slick-loading .slick-track
+{
+    visibility: hidden;
+}
+
+.slick-slide
+{
+    display: none;
+    float: left;
+
+    height: 100%;
+    min-height: 1px;
+}
+[dir='rtl'] .slick-slide
+{
+    float: right;
+}
+.slick-slide img
+{
+    display: block;
+}
+.slick-slide.slick-loading img
+{
+    display: none;
+}
+.slick-slide.dragging img
+{
+    pointer-events: none;
+}
+.slick-initialized .slick-slide
+{
+    display: block;
+}
+.slick-loading .slick-slide
+{
+    visibility: hidden;
+}
+.slick-vertical .slick-slide
+{
+    display: block;
+
+    height: auto;
+
+    border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+    display: none;
+}
+
+.slider-nav, .slider-for {
+	-ms-flex-item-align: center;
+    align-self: center;
+}
+.slider-nav, .slider-for {
+	width: 100%;
+}
+
+.slider-nav {
+	
+	padding-bottom: 50px;
+	text-align: center;
+}
+
+.slick-dotted.slick-slider
+{
+    margin-bottom: 0px;
+}
+
+.slick-dots
+{
+    position: relative;
+    bottom: 50px;
+
+    display: block;
+
+    width: 100%;
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+
+    text-align: center;
+}
+.slick-dots li
+{
+    position: relative;
+
+    display: inline-block;
+
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    padding: 0;
+    font-style: normal !important;
+    cursor: pointer;
+}
+.slick-dots li button
+{
+    font-size: 0;
+    line-height: 0;
+
+    display: block;
+
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+
+    cursor: pointer;
+
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: transparent;
+}
+.slick-dots li button:hover,
+.slick-dots li button:focus
+{
+    outline: none;
+}
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before
+{
+    opacity: 1;
+}
+.slick-dots li button:before
+{
+    font-size: 32px;
+    line-height: 20px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 20px;
+    height: 20px;
+
+    content: '•';
+    text-align: center;
+
+    opacity: .5;
+    color: #999;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.slick-dots li.slick-active button:before
+{
+    opacity: .75;
+    color: #3f6f7d;
+}
+
+.slick-current {
+	background-color: #fff;
+}
+/*===========End Slick Slider==========*/
+
+/*===========Giving Back===============*/
+.main-container {
+    max-width: 100%;
+    padding: 0;
+}
+#page-gb {
+    width: 100%;
+    position: relative;
+}
+
+#page-gb p {
+   margin: 0 !important;
+}
+
+#gb-section1{
+    width: 100%;
+    background-color: #fafafa;
+}
+
+.gb-banner-container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.gb-banner {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 180px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.gb-banner > h1, .gb-banner > p {
+    font-family: 'Baskerville', serif !important;
+    font-weight: 500;
+    color: #fff !important;
+}
+
+.gb-banner > h1 {
+    font-size: 30px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.gb-banner > p {
+    font-size: 18px !important;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.gb-banner-desc {
+    background-color: #fff;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -30px;
+    width: 75%;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.gb-banner-desc > p {
+    color: #999 !important;
+    line-height: 24px;
+    font-size: 14px;
+    font-family: 'Avenir', sans-serif !important;
+}
+
+.gb-rebuild{
+    margin: 0 auto;
+    padding: 50px 30px;
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+}
+
+.gb-rebuild > p {
+    font-size: 14px;
+    font-family: 'Avenir', sans-serif !important;
+    line-height: 24px;
+    color: #999 !important;
+    margin-top: 30px;
+}
+
+.gb-flex-panel{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.gb-plus-image {
+    width: 30px;
+    margin: 30px;
+}
+
+.gb-rebuild-image {
+    width: 200px;
+}
+
+.gb-justify-center {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.gb-flex-center {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+#gb-section2{
+    background-color: #414042;
+    position: relative;
+}
+.gb-section2-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 50px;   
+}
+
+.gb-heart-img, .gb-maykke-tag {
+    margin-bottom: 30px;
+}
+
+.gb-section2-content > p {
+    max-width: 750px;
+    text-align: center;
+    font-size: 14px;
+    font-family: 'Avenir', sans-serif !important;
+    line-height: 24px;
+    color: #fff !important;
+}
+
+.gb-heart-img img{
+    width: 100px;
+}
+
+.gb-maykke-tag img {
+    width: 300px;
+}
+
+.gb-arrow {
+    background-color: #414042;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+}
+
+.down {
+    transform: scale(1.5) rotate(45deg);
+    -webkit-transform: scale(1.5) rotate(45deg);
+}
+
+#gb-section3 {
+    background-color: #d8d8d8;
+}
+
+.gb-section3-content{
+    padding: 50px 30px;
+    text-align: center;
+}
+
+.gb-section3-content > h3 {
+    font-size: 30px;
+    margin-bottom: 50px;
+    font-family: 'Baskerville', serif;
+    font-weight: 500;
+    color: #414042;
+    text-transform: uppercase;
+}
+
+.gb-commit {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.gb-commit-item > img {
+   display: inline;
+}
+
+.gb-commit-item > h4, .gb-commit-figures > h4{
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-family: 'Gotham-Medium', sans-serif;
+    color: #414042;
+    margin-top: 30px;
+}
+
+.gb-commit-figures{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gb-commit-figures > h2 {
+    font-size: 60px;
+    margin: 0;
+    padding-right: 15px;
+    font-family: 'Baskerville', serif;
+    color: #3f6f7d !important;
+    font-weight: 500;
+}
+
+.gb-commit-figures > h4 {
+    margin: 0;
+    text-align: left;
+}
+
+.gb-panel-container {
+    max-width: 1024px;
+}
+
+.gb-image-panel {
+    width: 100%;
+}
+
+.gb-image-panel > img {
+    width: 100%;
+}
+
+.gb-text-panel {
+    width: 100%;
+    text-align: center;
+    padding: 50px 30px;
+}
+
+.gb-white-panel > h3 {
+    font-size: 26px;
+    font-family: 'Baskerville', serif;
+    text-transform: capitalize;
+    font-weight: 500;
+    margin-bottom: 30px;
+    color: #414042;
+}
+
+.gb-text-panel > p {
+    color: #999;
+    font-size: 14px; 
+    font-family: 'Avenir', sans-serif !important;
+    line-height: 24px;
+}
+
+.gb-text-panel > hr {
+    width: 100px;
+    margin: 20px auto;
+}
+
+.gb-container-header {
+    background-color: #6d6e71;
+    text-align: center;
+    position: relative;
+}
+
+.gb-container-header > h3{
+    padding: 50px;
+    margin: 0;
+    color: #fff;
+    font-size: 30px;
+    font-family: 'Baskerville', serif;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.gb-slider-panel {
+    width: 100%;
+}
+
+.gb-dark-panel {
+    background-color: #414042;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.gb-dark-panel > p {
+    color: #fff !important;
+}
+
+.gb-impact-line {
+    border: none;
+    border-bottom: 1px solid #ccc;
+    width: 80px;
+    margin: 0;
+}
+
+.gb-penisula {
+    width: 120px;
+}
+
+.gb-impact {
+    background-color: #fafafa;
+    position: relative;
+}
+
+.gb-text-impact-left {
+    padding: 30px;
+}
+
+.gb-text-impact-right {
+    padding: 30px;
+    text-align: left;
+}
+
+.gb-text-impact-left > h3 {
+    font-size: 26px;
+    font-weight: 500;
+    font-family: 'Baskerville', serif;
+    text-transform: capitalize;
+    color: #414042;
+    margin: 0;
+}
+
+.gb-mobile {
+    display: block;
+}
+
+.gb-desktop {
+    display: none;
+}
+
+.gb-breadcrumbs {
+    max-width: 1195px;
+    padding: 15px 30px;
+    margin: 0 auto;
+}
+
+.gb-breadcrumbs > ul {
+    list-style: none;
+}
+
+.gb-breadcrumbs ul > li {
+    margin-left: 0 !important;
+    font-family: 'Gotham-Light', sans-serif !imporant;
+    font-size: 11px !important;
+}
+
+@media only screen and (min-width: 768px){
+    .gb-banner {
+        height: 300px;
+    }
+
+    .gb-banner-desc {
+        margin-top: -50px;
+        padding: 50px;
+    }
+
+    .gb-rebuild {
+        padding: 80px;
+    }
+
+    .gb-rebuild > p {
+        margin-top: 0;
+    }
+
+    .gb-flex-panel {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+    }
+
+    .gb-plus-image {
+        margin: 0 50px;
+    }
+
+    .gb-section2-content, .gb-section3-content {
+        padding: 80px;
+    }
+
+    
+
+    .gb-panel-container {
+        margin: 150px auto 50px;
+    }
+
+    .gb-image-panel{
+        width: 50%;
+    }
+
+    .gb-text-panel{
+        width: 50%;
+        padding: 20px 50px;
+    }
+
+    .gb-text-panel > p {
+        padding: 0 35px;
+    }
+
+    .gb-container-header > h3 {
+        padding: 50px;
+    }
+
+    .gb-impact-line {
+        border-bottom: none;
+        border-left: 1px solid #ccc;
+        height: 100px;
+        width: 1px;
+    }
+
+    .gb-text-impact-left {
+        padding: 30px 80px;
+    }
+
+    .gb-mobile {
+        display: none;
+    }
+
+    .gb-desktop {
+        display: block;
+    }
+
+    .gb-slider-panel {
+        width: 50%;
+    }
+    
+    .gb-text-impact-right > p {
+        padding: 0;
+     }
+}
+
+@media only screen and (min-width: 1024px){
+    .gb-commit {
+       -webkit-box-orient: horizontal;
+       -webkit-box-direction: normal;
+       -ms-flex-direction: row;
+       flex-direction: row;
+    }
+
+    .gb-commit-item:nth-child(2){
+        padding: 0 50px;
+    }
+
+    .gb-text-panel {
+        padding: 50px;
+    }
+}
+
+@media only screen and (min-width: 1280px){
+    .gb-banner-container {
+        width: 80%;
+    }
+}
+/*===========End Giving Back===========*/
+
+</style>
+</head>
+<body>
+<div id="page-gb">
+    <div id="gb-section1">
+        <div class="gb-banner-container">
+            <div class="gb-banner" style="background-image: url('images/gb_Giving_back_banner.jpg')">
+                <h1>Giving Back</h1>
+                <p>Everyone deserves a safe and happy home</p>
+            </div>
+            <div class="gb-banner-desc">
+                <p>Over 20 million Americans are in need of structurally necessary home repairs and remodels.</p>
+                <p>1.65 million of our neighbors struggle with the health and economic implications of living in unsafe and unstable living conditions.</p>
+            </div>
+        </div>
+        <div class="gb-rebuild">
+            <div class="gb-flex-panel gb-justify-center gb-flex-center" style="margin-bottom: 50px";>
+                <img src="images/gb_Maykke_logo-01.svg" class="gb-rebuild-image">
+                <img src="images/gb_Plus-01.svg" class="gb-plus-image">
+                <img src="images/gb_Rebuilding_logo-01.svg" class="gb-rebuild-image">
+            </div>
+            <p>Maykke is partnering with Rebuilding Together, a leading nonprofit committed rebuilding homes and revitalizing the communities of our neighbors in need. Their 130+ local affiliates provide critical repairs to the homes of our neighbors and revitalize the communities in which we live. Since 1988 Rebuilding Together has served 5.78 million people, repairing and rehabilitating 192,000+ homes and nonprofit facilities in 39 states and the District of Columbia.</p>
+        </div>
+    </div>
+    <div id="gb-section2">
+        <div class="gb-section2-content gb-flex-center gb-justify-center">
+            <div class="gb-heart-img">
+                <img src="images/gb_Givingback_Logo-01.svg">
+            </div>
+            <div class="gb-maykke-tag">
+                <img src="images/gb_Makeadifference-01.svg">
+            </div>
+            <p>We want to make a difference, so we are donating time, money, and Maykke products to Rebuilding Together projects in our native San Francisco Bay Area and around the country.</p>
+        </div>
+        <i class="gb-arrow down"></i>
+    </div>
+
+    <div id="gb-section3">
+        <div class="gb-section3-content">
+            <h3>OUR 2018 DONATION COMMITMENT</h3>
+            <div class="gb-commit">
+                <div class="gb-commit-item">
+                    <img src="images/gb_Graphic.gif">
+                    <h4>Minimum Cash Donation</h4>
+                    <div class="gb-commit-figures">
+                        <h2>$300</h2>
+                        <h4>Donated<br>So Far</h4>
+                    </div>
+                </div>
+                <div class="gb-commit-item">
+                    <img src="images/gb_Box.gif">
+                    <h4>Sinks, Vanities & Other Maykke Products</h4>
+                    <div class="gb-commit-figures">
+                        <h2>50</h2>
+                        <h4>Product<br>Donated</h4>
+                    </div>
+                </div>
+                <div class="gb-commit-item">
+                    <img src="images/gb_Volunteer.gif">
+                    <h4>Employee Volunteer Hours</h4>
+                    <div class="gb-commit-figures">
+                        <h2>20</h2>
+                        <h4>Hours<br>So Far</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="gb-section4">
+        <div class="gb-panel-container">
+            <div class="gb-flex-panel gb-flex-center">
+                <div class="gb-image-panel">
+                    <img src="images/gb_Photo_1.jpg">
+                </div>
+                <div class="gb-text-panel gb-white-panel">
+                    <h3>Your Purchase is a Contribution</h3>
+                    <p>Working closely with the organization, we ensure that funds go to worthy projects around the country that aid people in need who cannot afford structurally necessary repairs and remodels.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="gb-panel-container">
+            <div class="gb-container-header">
+                <h3>Get Involved</h3>
+                <i class="gb-arrow down gb-mobile" style="background-color: #6d6e71"></i>
+            </div>
+            <div class="gb-flex-panel">
+                <div class="gb-text-panel gb-dark-panel gb-flex-center">
+                    <img src="images/gb_Rebuilding_peninsula_logo-01.svg" class="gb-penisula">
+                    <hr>
+                    <p>We're working with our local affiliate, 
+                    Rebuilding Together Peninsula.<br>
+                    <a href="" style="color: #fff; text-decoration: underline;">Find yours</a>, and join us in serving our neighbors in need.</p>
+                    <a href="" class="button white" style="margin-top: 15px; height: 25px; line-height: 25px;">Learn More</a>
+                </div>
+                <div class="gb-slider-panel" id="gb-slider1">
+                    <img src="images/gb_Gallery1_1.jpg">
+                </div>
+            </div>
+        </div>
+
+        <div class="gb-panel-container">
+            <div class="gb-flex-panel gb-flex-center gb-impact">
+                <div class="gb-text-panel gb-text-impact-left">
+                    <h3>Rebuilding Together's Impact Over the Past 30 Years</h3>
+                    <i class="gb-arrow down gb-mobile" style="background-color: #fafafa"></i>
+                </div>
+                <hr class="gb-impact-line gb-white-panel">
+                <div class="gb-text-panel gb-text-impact-right">
+                    <p>We at Maykke believe that everyone has a right to a safe living environment, which is why we're excited to partner with the veteran organization Rebuilding Together. Their impact over the past 30 years speaks volumes.</p>
+                </div>
+            </div>
+            <div class="gb-flex-panel">
+                <div class="gb-image-panel gb-desktop">
+                    <img src="images/gb_Info_board.jpg">
+                </div>
+                <div class="gb-image-panel gb-mobile">
+                    <img src="images/gb_Info_board_mobile.jpg">
+                </div>
+                <div class="gb-slider-panel" id="gb-slider2">
+                    <img src="images/gb_Gallery2_1.jpg">
+                    <img src="images/gb_Gallery2_1.jpg">
+                    <img src="images/gb_Gallery2_1.jpg">
+                    <img src="images/gb_Gallery2_1.jpg">
+                    <img src="images/gb_Gallery2_1.jpg">
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $('#gb-slider1').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      fade: true,
+      dots: true,
+      autoplay: true,
+  	  autoplaySpeed: 3000,
+	});
+
+    $('#gb-slider2').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      fade: true,
+      dots: true,
+      autoplay: true,
+      autoplaySpeed: 3000,
+    });
+
+
+</script>
+</body>
+</html>
